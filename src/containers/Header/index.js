@@ -21,14 +21,22 @@ class Header extends Component {
         console.log(isLoggedIn)
         return (
             <div className="mb-4">
-                <Navbar color="light" light expand>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem >
-                               {isLoggedIn ? <NavItem style={{cursor: "pointer"}} onClick={() => this.signout()} className="p-2 text-decoration-none text-dark">Logout</NavItem> :
-                                   <Link  className="p-5 text-decoration-none text-dark" to={LOGIN_PATH}>Login</Link>
-                                   }
-                            </NavItem>
-                        </Nav>
+                <Navbar style={{cursor: "pointer"}} color="light" light expand>
+                    <Nav className="px-5">
+                        <NavItem>
+                            <Link to="/" className="text-decoration-none text-dark">
+                                Home
+                            </Link>
+                        </NavItem>
+                    </Nav>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem>
+                            {isLoggedIn ? <NavItem style={{cursor: "pointer"}} onClick={() => this.signout()}
+                                                   className="p-2 text-decoration-none text-dark">Logout</NavItem> :
+                                <Link className="p-5 text-decoration-none text-dark" to={LOGIN_PATH}>Login</Link>
+                            }
+                        </NavItem>
+                    </Nav>
                 </Navbar>
             </div>
         )

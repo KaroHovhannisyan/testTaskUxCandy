@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25e61d9-be9e-486a-b1e6-2d88d954bb44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TaskCreatorForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskCreatorForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TasksTable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TasksTable/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/taskSaga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/taskSaga/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
