@@ -28,7 +28,7 @@ class Login extends Component {
                     <div>
                         <Form onSubmit={(e) => this.login(e)}>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                                <Label for="email" className="w-100 text-center mr-sm-2">UserName</Label>
+                                <Label for="email" className="w-100 text-center mr-sm-2">Username</Label>
                                 <Input
                                     value={username}
                                     onChange={(e) => this.setState({username: e.target.value})}

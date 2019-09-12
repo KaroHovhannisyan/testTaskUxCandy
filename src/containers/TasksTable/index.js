@@ -79,7 +79,7 @@ class ReactTableComponent extends Component {
                             <thead>
                             <tr>
                                 <th>Email</th>
-                                <th>UserName</th>
+                                <th>Username</th>
                                 <th>Text</th>
                                 <th>Status</th>
                             </tr>
