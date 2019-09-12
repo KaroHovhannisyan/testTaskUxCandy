@@ -8,15 +8,9 @@ import {
 } from 'reactstrap';
 import {Link} from "react-router-dom"
 
-class Header extends Component {
+class Index extends Component {
     state = {
         isOpen: false,
-    }
-
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
     }
 
     render() {
@@ -36,4 +30,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Index;
