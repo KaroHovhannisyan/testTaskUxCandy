@@ -1,4 +1,4 @@
-import {mainParams} from "../common/constants";
+import {mainParams, TOKEN} from "../common/constants";
 import axios from "axios";
 
 export default class Api {
@@ -28,6 +28,10 @@ export default class Api {
 
     static getTasks(){
         return axios(`${mainParams.apiUrl}/api/tasks`)
+    }
+
+    static logout(){
+        return axios(`${mainParams.apiUrl}/api/auth/logout`, {headers: {Authorization: `Bearer ${localStorage.getItem(TOKEN)}`}})
     }
 }
 

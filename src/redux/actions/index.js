@@ -27,3 +27,13 @@ export const POST_TASK_FAIL = "POST_TASK_FAIL";
 export const attemptPostTask = (data) => ({type: ATTEMPT_POST_TASK, payload: data});
 export const postTaskSuccess = (data) => ({type: POST_TASK_SUCCESS, payload: data});
 export const postTaskFail = (error) => ({type: POST_TASK_FAIL, payload: error});
+
+/**
+ * Post task action creators
+ */
+export const ATTEMPT_LOGOUT = "ATTEMPT_LOGOUT";
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
+export const LOGOUT_FAIL = "LOGOUT_FAIL";
+export const attemptLogout = () => ({type: ATTEMPT_LOGOUT});
+export const logoutSuccess = () => ({type: LOGOUT_SUCCESS});
+export const logoutFail = (error) => ({type: LOGOUT_FAIL, payload: error});

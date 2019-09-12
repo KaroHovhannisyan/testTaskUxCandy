@@ -1,8 +1,8 @@
 import { call, put } from 'redux-saga/effects';
-import {ATTEMPT_LOGIN, loginFailed, loginSuccess} from "../../actions";
+import {ATTEMPT_LOGIN, ATTEMPT_LOGOUT, loginFailed, loginSuccess, logoutFail, logoutSuccess} from "../../actions";
 import Api from "../../../api";
 import {history} from "../../../common/getAppConfigurations";
-import {TABLE_PATH, TOKEN} from "../../../common/constants";
+import {LOGIN_PATH, TABLE_PATH, TOKEN} from "../../../common/constants";
 
 function* authSaga({ type, payload }) {
     switch (type) {
@@ -15,6 +15,18 @@ function* authSaga({ type, payload }) {
             } catch (e) {
                 yield put(loginFailed(e));
             }
+            break;
+        }
+        case ATTEMPT_LOGOUT: {
+            try {
+                localStorage.removeItem(TOKEN);
+                yield call(Api.logout);
+                yield put(logoutSuccess());
+                history.push(LOGIN_PATH);
+            } catch (e) {
+                yield put(logoutFail(e));
+            }
+            break;
         }
     }
 }

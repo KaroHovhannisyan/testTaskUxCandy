@@ -11,14 +11,22 @@ import {ACTIONS} from "../../redux";
 import {connect} from "react-redux";
 
 class Header extends Component {
+
+    signout() {
+        this.props.logout()
+    }
+
     render() {
         const {isLoggedIn} = this.props
+        console.log(isLoggedIn)
         return (
             <div className="mb-4">
                 <Navbar color="light" light expand>
                         <Nav className="ml-auto" navbar>
                             <NavItem >
-                               <Link className="p-5 text-decoration-none text-dark" to={LOGIN_PATH}>{isLoggedIn ? "Logout": "Authorize" }</Link>
+                               {isLoggedIn ? <NavItem style={{cursor: "pointer"}} onClick={() => this.signout()} className="p-2 text-decoration-none text-dark">Logout</NavItem> :
+                                   <Link  className="p-5 text-decoration-none text-dark" to={LOGIN_PATH}>Login</Link>
+                                   }
                             </NavItem>
                         </Nav>
                 </Navbar>
@@ -33,7 +41,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     postTask: (data) => dispatch(ACTIONS.attemptPostTask(data)),
-    getTasks: () => dispatch(ACTIONS.attemptGetTasks())
+    getTasks: () => dispatch(ACTIONS.attemptGetTasks()),
+    logout: () => dispatch(ACTIONS.attemptLogout()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

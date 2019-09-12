@@ -20,6 +20,12 @@ const mainReducer = (state = defaultState, action) => {
                 user: action.payload.message,
                 isLoggedIn: true
             }
+        case actionTypes.LOGOUT_SUCCESS:
+            return {
+                ...state,
+                user: null,
+                isLoggedIn: false
+            }
     }
     return state;
 };
