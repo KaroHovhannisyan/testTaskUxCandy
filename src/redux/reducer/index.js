@@ -1,8 +1,9 @@
+import * as actionTypes from "../actions";
 const defaultState = {
-   isLoggedIn: true,
-    tasks: null
+    isLoggedIn: false,
+    tasks: null,
+    user: null
 };
-import * as actionTypes from "../actions"
 
 const mainReducer = (state = defaultState, action) => {
     switch (action.type) {
@@ -11,8 +12,14 @@ const mainReducer = (state = defaultState, action) => {
                 ...state,
                 tasks: action.data
             }
+        case actionTypes.LOGIN_SUCCESS:
+            return {
+                ...state,
+                user: action.user,
+                isLoggedIn: true
+            }
     }
     return state;
-}
+};
 
 export default mainReducer;

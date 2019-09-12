@@ -13,4 +13,16 @@ export default class Api {
             data: bodyFormData
         })
     }
+
+    static postTask(data){
+        const bodyFormData = new FormData();
+        bodyFormData.set('email', data.email);
+        bodyFormData.set('text', data.text);
+        bodyFormData.set('username', data.username);
+        return axios({
+            method: 'post',
+            url: `${mainParams.apiUrl}/api/tasks`,
+            data: bodyFormData
+        })
+    }
 }
