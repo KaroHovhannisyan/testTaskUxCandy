@@ -37,3 +37,11 @@ export const LOGOUT_FAIL = "LOGOUT_FAIL";
 export const attemptLogout = () => ({type: ATTEMPT_LOGOUT});
 export const logoutSuccess = () => ({type: LOGOUT_SUCCESS});
 export const logoutFail = (error) => ({type: LOGOUT_FAIL, payload: error});
+
+
+export const ATTEMPT_EDIT_TASK = "ATTEMPT_EDIT_TASK";
+export const EDIT_TASK_SUCCESS = "EDIT_TASK_SUCCESS";
+export const EDIT_TASK_FAIL = "EDIT_TASK_FAIL";
+export const attemptEditTask = (data) => ({type: ATTEMPT_EDIT_TASK, payload: data});
+export const editTaskSuccess = (data) => ({type: EDIT_TASK_SUCCESS, payload: data});
+export const editTaskFail = (error) => ({type: EDIT_TASK_FAIL, payload: error});

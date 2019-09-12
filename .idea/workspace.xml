@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a35fb659-7b4a-44ad-b7a0-611a9b98b2d1" name="Default Changelist" comment="">
+    <list default="true" id="d25e61d9-be9e-486a-b1e6-2d88d954bb44" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TaskCreatorForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskCreatorForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/TasksTable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TasksTable/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/authSaga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/authSaga/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/saga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/saga/taskSaga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/taskSaga/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -39,6 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -88,7 +94,6 @@
       <updated>1568278120835</updated>
       <workItem from="1568278122159" duration="5336000" />
       <workItem from="1568288264261" duration="6146000" />
-      <workItem from="1568320340106" duration="3458000" />
     </task>
     <servers />
   </component>
