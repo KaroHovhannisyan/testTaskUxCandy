@@ -13,13 +13,18 @@ const mainReducer = (state = defaultState, action) => {
             return {
                 ...state,
                 tasks: action.payload
-            }
+            };
+        case actionTypes.POST_TASK_SUCCESS:
+            return {
+                ...state,
+                postAdded: true
+            };
         case actionTypes.LOGIN_SUCCESS:
             return {
                 ...state,
                 user: action.payload.message,
                 isLoggedIn: true
-            }
+            };
     }
     return state;
 };

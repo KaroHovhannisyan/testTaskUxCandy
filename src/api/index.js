@@ -1,4 +1,4 @@
-import {mainParams} from "../common/constants";
+import {mainParams, TOKEN} from "../common/constants";
 import axios from "axios";
 
 export default class Api {
@@ -26,8 +26,21 @@ export default class Api {
         })
     }
 
+    static editTask(data){
+        const bodyFormData = new FormData();
+        bodyFormData.set('text', data.newValue);
+        bodyFormData.set('status', 10);
+        return axios({
+            method: 'post',
+            headers: {Authorization: ` Bearer ${localStorage.getItem(TOKEN)}`},
+            url: `${mainParams.apiUrl}/api/tasks/edit/${data._id}`,
+            data: bodyFormData
+        })
+    }
+
     static getTasks(){
         return axios(`${mainParams.apiUrl}/api/tasks`)
     }
+
 }
 

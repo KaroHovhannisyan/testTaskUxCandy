@@ -53,7 +53,7 @@ class TaskCreatorForm extends Component {
         const isUserNameValid = Validator.isValueExist(username);
         const isTextValid = Validator.isValueExist(text);
         if (isEmailValid && isTextValid && isUserNameValid) {
-            this.setState({errors: {}, email: '', username: '', text, showSuccessModal: true});
+            this.setState({errors: {}, email: '', username: '', text: '', showSuccessModal: true});
             this.props.onPostTask({email, text, username});
         } else {
             let errors = {}

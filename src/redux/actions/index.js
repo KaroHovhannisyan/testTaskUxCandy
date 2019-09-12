@@ -18,12 +18,16 @@ export const attemptGetTasks = () => ({type: ATTEMPT_GET_TASKS});
 export const getTasksSuccess = (data) => ({type: GET_TASKS_SUCCESS, payload: data});
 export const getTasksFail = (error) => ({type: GET_TASKS_FAIL, payload: error});
 
-/**
- * Post task action creators
- */
 export const ATTEMPT_POST_TASK = "ATTEMPT_POST_TASK";
 export const POST_TASK_SUCCESS = "POST_TASK_SUCCESS";
 export const POST_TASK_FAIL = "POST_TASK_FAIL";
 export const attemptPostTask = (data) => ({type: ATTEMPT_POST_TASK, payload: data});
 export const postTaskSuccess = (data) => ({type: POST_TASK_SUCCESS, payload: data});
 export const postTaskFail = (error) => ({type: POST_TASK_FAIL, payload: error});
+
+export const ATTEMPT_EDIT_TASK = "ATTEMPT_EDIT_TASK";
+export const EDIT_TASK_SUCCESS = "EDIT_TASK_SUCCESS";
+export const EDIT_TASK_FAIL = "EDIT_TASK_FAIL";
+export const attemptEditTask = (data) => ({type: ATTEMPT_EDIT_TASK, payload: data});
+export const editTaskSuccess = (data) => ({type: EDIT_TASK_SUCCESS, payload: data});
+export const editTaskFail = (error) => ({type: EDIT_TASK_FAIL, payload: error});
