@@ -1,9 +1,8 @@
 /** Main Params **/
 
 export const mainParams = {
-    apiUrl: process.env.API_URL || "https://uxcandy.com"
+    apiUrl: "https://tasks-list-api.herokuapp.com"
 };
-
 
 /** Routes **/
 export const MAIN_PATH = '/';

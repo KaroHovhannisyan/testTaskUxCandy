@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import 'react-table/react-table.css'
 import { data } from './data';
 import TaskForm from "./TaskForm";
-
+import {connect} from "react-redux";
+import {ACTIONS} from "../../redux";
 const getValue = (row) => {
     return <i className="w-100 text-center fa fa-edit font-weight-normal -cursor-pointer"></i>
 }
@@ -35,10 +36,17 @@ const columns = [
         style: { whiteSpace: 'unset' },
         maxWidth: 150,
     },
-];
+]
 
-export default class ReactTableComponent extends Component {
+class ReactTableComponent extends Component {
+
+    componentDidMount() {
+        this.props.getTasks()
+    }
+
     render() {
+        const {tasks} = this.props;
+        if (tasks) console.log("tasks", tasks)
         return (
             <div className="row">
                 <div className="col">
@@ -61,3 +69,12 @@ export default class ReactTableComponent extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    tasks: state.tasks
+});
+const mapDispatchToProps = (dispatch) => ({
+    getTasks: () => dispatch(ACTIONS.attemptGetTasks())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ReactTableComponent);
