@@ -3,7 +3,8 @@ import {TOKEN} from "../../common/constants";
 const defaultState = {
     isLoggedIn: !!localStorage.getItem(TOKEN),
     tasks: null,
-    user: null
+    user: null,
+    error: ''
 };
 
 const mainReducer = (state = defaultState, action) => {
@@ -23,13 +24,20 @@ const mainReducer = (state = defaultState, action) => {
             return {
                 ...state,
                 user: action.payload.message,
-                isLoggedIn: true
+                isLoggedIn: true,
+                error: '',
             }
         case actionTypes.LOGOUT_SUCCESS:
             return {
                 ...state,
                 user: null,
                 isLoggedIn: false
+            }
+        case actionTypes.LOGIN_FAILED:
+            console.log(action, "action.data")
+            return {
+                ...state,
+                error: 'неправильные учетные данные'
             }
     }
     return state;
