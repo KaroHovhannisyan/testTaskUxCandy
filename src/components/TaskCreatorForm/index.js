@@ -73,10 +73,9 @@ class TaskCreatorForm extends Component {
     }
 
     renderSuccessModal(){
-        return <Modal isOpen={true} toggle={this.toggle}>
-                <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+        return <Modal isOpen={true}>
                 <ModalBody>
-                    Your task added !!!!
+                    Успешно добавлено
                 </ModalBody>
                 <ModalFooter>
                     <Button color="primary" onClick={() => this.setState({showSuccessModal: false})}>Понятно</Button>

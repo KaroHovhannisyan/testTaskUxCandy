@@ -37,8 +37,10 @@ function* taskSaga({ type, payload }) {
             try {
                 const response = yield call(Api.editTask, payload);
                 yield put(editTaskSuccess(response.data.message));
+                yield put(editTaskSuccess(response.data.message));
             } catch (e) {
                 yield put(editTaskFail(e));
+                yield put(attemptGetTasks());
             }
             break;
         }
