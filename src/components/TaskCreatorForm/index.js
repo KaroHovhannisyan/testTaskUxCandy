@@ -6,10 +6,13 @@ import {
     Col,
     Row,
     FormGroup,
-    FormFeedback
+    FormFeedback,
+    Modal,
+    ModalHeader,
+    Button,
+    ModalBody,
+    ModalFooter
 } from "reactstrap";
-import {ACTIONS} from "../../redux";
-import {connect} from "react-redux";
 
 const TASK_CREATE_FIELDS = [
     {
@@ -38,7 +41,8 @@ class TaskCreatorForm extends Component {
             email: "",
             username: "",
             text: ""
-        }
+        },
+        showSuccessModal: false
     };
 
 
@@ -49,8 +53,8 @@ class TaskCreatorForm extends Component {
         const isUserNameValid = Validator.isValueExist(username);
         const isTextValid = Validator.isValueExist(text);
         if (isEmailValid && isTextValid && isUserNameValid) {
-            this.setState({errors: {}});
-           this.props.onPostTask({email, text, username})
+            this.setState({errors: {}, email: '', username: '', text, showSuccessModal: true});
+            this.props.onPostTask({email, text, username});
         } else {
             let errors = {}
             if (!isEmailValid) {
@@ -68,10 +72,23 @@ class TaskCreatorForm extends Component {
 
     }
 
+    renderSuccessModal(){
+        return <Modal isOpen={true} toggle={this.toggle}>
+                <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                <ModalBody>
+                    Your task added !!!!
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={() => this.setState({showSuccessModal: false})}>Понятно</Button>
+                </ModalFooter>
+            </Modal>
+    }
+
     render() {
         const state = this.state;
-        console.log(this.state)
         return (
+            <div>
+                {state.showSuccessModal && this.renderSuccessModal()}
             <Row className="justify-content-center px-5">
                 <Col>
                     <div>
@@ -102,6 +119,7 @@ class TaskCreatorForm extends Component {
                     </div>
                 </Col>
             </Row>
+          </div>
         )
     }
 }

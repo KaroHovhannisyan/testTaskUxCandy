@@ -6,16 +6,17 @@ const defaultState = {
 };
 
 const mainReducer = (state = defaultState, action) => {
+    console.log(action, "reducer")
     switch (action.type) {
         case actionTypes.GET_TASKS_SUCCESS:
             return {
                 ...state,
-                tasks: action.data
+                tasks: action.payload
             }
         case actionTypes.LOGIN_SUCCESS:
             return {
                 ...state,
-                user: action.user,
+                user: action.payload.message,
                 isLoggedIn: true
             }
     }

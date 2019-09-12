@@ -19,8 +19,8 @@ function* taskSaga({ type, payload }) {
         }
         case ATTEMPT_GET_TASKS: {
             try {
-                const data = yield call(Api.getTasks, payload);
-                yield put(getTasksSuccess(data));
+                const response = yield call(Api.getTasks, payload);
+                yield put(getTasksSuccess(response.data.message));
             } catch (e) {
                 yield put(postTaskFail(e));
             }

@@ -10,8 +10,8 @@ function* authSaga({ type, payload }) {
             try {
                 const user = yield call(Api.login, payload);
                 localStorage.setItem(TOKEN, user.data.message.token);
+                yield put(loginSuccess(user.data));
                 history.push(TABLE_PATH);
-                yield call(loginSuccess(user));
             } catch (e) {
                 yield put(loginFailed(e));
             }

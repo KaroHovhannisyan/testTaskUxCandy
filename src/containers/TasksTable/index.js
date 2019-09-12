@@ -1,44 +1,12 @@
-import ReactTable from 'react-table';
 import React, { Component } from 'react';
-import { data } from './data';
 import TaskCreatorForm from "../../components/TaskCreatorForm";
 import {connect} from "react-redux";
 import {ACTIONS} from "../../redux";
-import 'react-table/react-table.css'
+import {Table} from "reactstrap";
 
-
-const getValue = (row) => {
+const getValue = () => {
     return <i className="w-100 text-center fa fa-edit font-weight-normal -cursor-pointer"></i>
 }
-
-const columns = [
-    {
-        Header: 'имя',
-        accessor: 'name',
-        headerStyle: { whiteSpace: 'unset' },
-        style: { whiteSpace: 'unset' },
-    },
-    {
-        Header: 'email',
-        accessor: 'eventType',
-        headerStyle: { whiteSpace: 'unset' },
-        style: { whiteSpace: 'unset' },
-    },
-    {
-        Header: 'текст ',
-        accessor: 'eventType',
-        headerStyle: { whiteSpace: 'unset' },
-        style: { whiteSpace: 'unset' },
-    },
-    {
-        Header: 'Actions',
-        Cell: row => getValue(row),
-        //accessor: 'actualAttended',
-        headerStyle: { whiteSpace: 'unset' },
-        style: { whiteSpace: 'unset' },
-        maxWidth: 150,
-    },
-]
 
 class ReactTableComponent extends Component {
 
@@ -47,22 +15,33 @@ class ReactTableComponent extends Component {
    }
 
     render() {
+      const {tasks} = this.props;
         return (
             <div className="row">
                 <div className="col">
                     <TaskCreatorForm onPostTask={this.props.postTask}/>
                     <div style={{ padding: '50px' }}>
-                        <ReactTable
-                            className="-highlight"
-                            sortable={true}
-                            minRows={0}
-                            pageSize={6}
-                            data={data}
-                            columns={columns}
-                            pages={2}
-                            showPageSizeOptions={false}
-                            showPageJump={true}
-                        />
+                        <Table>
+                            <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>UserName</th>
+                                <th>Text</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                tasks.map(task => (
+                                    <tr key={task._id}>
+                                        <th scope="row">{task.email}</th>
+                                        <td>{task.username}</td>
+                                        <td>{task.text}</td>
+                                        <td>Edit</td>
+                                    </tr>
+                                ))
+                            }
+                            </tbody>
+                        </Table>
                     </div>
                 </div>
             </div>
@@ -71,8 +50,9 @@ class ReactTableComponent extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    tasks: state.tasks
+        tasks: state.tasks ? state.tasks[0].tasks : []
 });
+
 const mapDispatchToProps = (dispatch) => ({
     postTask: (data) => dispatch(ACTIONS.attemptPostTask(data)),
     getTasks: () => dispatch(ACTIONS.attemptGetTasks())
