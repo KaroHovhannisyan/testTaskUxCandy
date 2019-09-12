@@ -2,7 +2,13 @@ import { call, put } from 'redux-saga/effects';
 import {
     postTaskSuccess,
     postTaskFail,
-    ATTEMPT_POST_TASK, ATTEMPT_GET_TASKS, getTasksSuccess, ATTEMPT_EDIT_TASK, editTaskSuccess, editTaskFail
+    ATTEMPT_POST_TASK,
+    ATTEMPT_GET_TASKS,
+    getTasksSuccess,
+    ATTEMPT_EDIT_TASK,
+    editTaskSuccess,
+    editTaskFail,
+    attemptGetTasks
 } from "../../actions";
 import Api from "../../../api";
 
@@ -12,6 +18,7 @@ function* taskSaga({ type, payload }) {
             try {
                 const data = yield call(Api.postTask, payload);
                 yield put(postTaskSuccess(data));
+                yield put(attemptGetTasks());
             } catch (e) {
                 yield put(postTaskFail(e));
             }
