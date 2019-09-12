@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a35fb659-7b4a-44ad-b7a0-611a9b98b2d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/validator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/getAppConfigurations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/getAppConfigurations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TablePage/TablePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TasksTable/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TablePage/TaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TaskCreatorForm/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TablePage/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TasksTable/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/authSaga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/authSaga/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/TasksTable/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TasksTable/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/saga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/saga/taskSaga/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/taskSaga/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,5 +107,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/saga/taskSaga/index.js</url>
+          <line>10</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

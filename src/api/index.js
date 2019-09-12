@@ -25,4 +25,9 @@ export default class Api {
             data: bodyFormData
         })
     }
+
+    static getTasks(){
+        return axios(`${mainParams.apiUrl}/api/tasks`)
+    }
 }
+
