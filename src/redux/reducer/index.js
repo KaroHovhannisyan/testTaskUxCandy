@@ -1,6 +1,7 @@
 import * as actionTypes from "../actions";
+import {TOKEN} from "../../common/constants";
 const defaultState = {
-    isLoggedIn: false,
+    isLoggedIn: !!localStorage.getItem(TOKEN),
     tasks: null,
     user: null
 };
