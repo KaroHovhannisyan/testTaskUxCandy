@@ -43,6 +43,7 @@ const columns = [
 class ReactTableComponent extends Component {
 
    componentDidMount() {
+       this.props.getTasks()
    }
 
     render() {
@@ -73,7 +74,8 @@ const mapStateToProps = (state) => ({
     tasks: state.tasks
 });
 const mapDispatchToProps = (dispatch) => ({
-    postTask: (data) => dispatch(ACTIONS.attemptPostTask(data))
+    postTask: (data) => dispatch(ACTIONS.attemptPostTask(data)),
+    getTasks: () => dispatch(ACTIONS.attemptGetTasks())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReactTableComponent);

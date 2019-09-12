@@ -1,5 +1,9 @@
 import { call, put } from 'redux-saga/effects';
-import {ATTEMPT_GET_TASKS, postTaskSuccess, getTasksFail, ATTEMPT_POST_TASK, postTaskFail} from "../../actions";
+import {
+    postTaskSuccess,
+    postTaskFail,
+    ATTEMPT_POST_TASK, ATTEMPT_GET_TASKS, getTasksSuccess
+} from "../../actions";
 import Api from "../../../api";
 
 function* taskSaga({ type, payload }) {
@@ -11,6 +15,16 @@ function* taskSaga({ type, payload }) {
             } catch (e) {
                 yield put(postTaskFail(e));
             }
+            break;
+        }
+        case ATTEMPT_GET_TASKS: {
+            try {
+                const data = yield call(Api.getTasks, payload);
+                yield put(getTasksSuccess(data));
+            } catch (e) {
+                yield put(postTaskFail(e));
+            }
+            break;
         }
     }
 }
