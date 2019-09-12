@@ -3,6 +3,8 @@ import {Provider} from "react-redux";
 import { BrowserRouter} from "react-router-dom";
 import getAppConfigurations from "./common/getAppConfigurations";
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 class App extends Component {
   render() {

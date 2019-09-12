@@ -8,3 +8,4 @@ export const mainParams = {
 /** Routes **/
 export const MAIN_PATH = '/';
 export const LOGIN_PATH = '/login';
+export const TABLE_PATH = '/table';
